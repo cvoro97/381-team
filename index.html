@@ -1,9 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="sr">
-<head>
-  <link rel="icon" type="image/png" href="logo.png">
-  <meta charset="UTF-8">
+$1<link rel="icon" type="image/png" href="logo.png">
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>381 TEAM</title>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
@@ -22,9 +20,8 @@
       --section-text: #000;
     }
     body {
-      margin: 0;
-      font-family: 'Barlow', sans-serif;
       background-color: var(--bg-color);
+      color: var(--text-color);
       color: var(--text-color);
     }
     header {
@@ -47,6 +44,9 @@
     nav a:hover {
       text-decoration: underline;
     }
+    .lang-switch {
+      margin-left: auto;
+    }
     section {
       padding: 4rem 2rem;
     }
@@ -63,27 +63,17 @@
       font-size: 3rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      background: none;
-      opacity: 0.85;
       animation: fadeIn 2s ease-in-out;
-    }
-    .sr-content, .en-content {
-      display: none;
-    }
-    .sr .sr-content,
-    .en .en-content {
-      display: block;
-    }
-    .social-links {
-      text-align: center;
-      margin: 2rem;
-    }
-    .social-links a {
-      color: #fff;
-      font-weight: 600;
-      text-decoration: none;
-      margin: 0 1rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 0.5rem 1.5rem;
+      border-radius: 12px;
+     color: white;
+    $1
+      animation: fadeIn 2s ease-in-out;}
+    .hero p {
       font-size: 1.2rem;
+      font-weight: 400;
+      max-width: 600px;
     }
     form {
       max-width: 400px;
@@ -96,6 +86,7 @@
       margin-bottom: 1rem;
       border: none;
       border-radius: 4px;
+      font-family: 'Barlow', sans-serif;
     }
     form button {
       padding: 0.75rem;
@@ -103,10 +94,25 @@
       color: white;
       border: none;
       cursor: pointer;
+      font-family: 'Barlow', sans-serif;
       font-weight: 600;
     }
     form button:hover {
       background-color: #666;
+    }
+    #about, #join {
+      background-color: var(--section-bg);
+      color: var(--section-text);
+      border-radius: 10px;
+      margin: 2rem;
+      padding: 2rem;
+    }
+    .sr-content, .en-content {
+      display: none;
+    }
+    .sr .sr-content,
+    .en .en-content {
+      display: block;
     }
     .toggle-mode {
       position: fixed;
@@ -117,12 +123,24 @@
       border: none;
       padding: 0.5rem 1rem;
       cursor: pointer;
+      font-family: 'Barlow', sans-serif;
     }
-    @keyframes fadeIn {
+    .social-links {
+      text-align: center;
+      margin: 2rem;
+    }
+    .social-links a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1.2rem;
+    }
+  @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
+$1
 </head>
 <body class="sr">
   <header>
@@ -133,37 +151,67 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section id="home" class="hero">
     <div class="sr-content">
-      <h1>Добродошли у 381 TEAM</h1>
+      <h1 style="opacity: 0.85; background: none;">Добродошли у 381 TEAM</h1>
     </div>
     <div class="en-content">
-      <h1>Welcome to 381 TEAM</h1>
+      <h2>Events</h2>
+      <h3>Completed</h3>
+      <ul>
+        <li><s>Finnish Brutality 2024 – August 25–26, 2024 – Finland</s></li>
+        <li><s>Finnish Brutality 2025 – February 17–18, 2025 – Finland</s></li>
+        <li><s>Defcon 1 – March 30, 2025 – Poland</s></li>
+      </ul>
+      <h3>Upcoming</h3>
+      <ul>
+        <li>Operation Furia – June 6, 2025 – Poland</li>
+        <li>Reacon Squad – June 7–8, 2025 – Poland</li>
+      </ul>
     </div>
-  </section>
+  <section id="events">
+  <div class="sr-content">
+    <h2>Догађаји</h2>
+    <h3>Завршени</h3>
+    <ul>
+      <li><s>Finnish Brutality 2024 – 25–26. август 2024 – Финска</s></li>
+      <li><s>Finnish Brutality 2025 – 17–18. фебруар 2025 – Финска</s></li>
+      <li><s>Defcon 1 – 30. март 2025 – Пољска</s></li>
+    </ul>
+    <h3>Предстојећи</h3>
+    <ul>
+      <li>Операција Furia – 06. јун 2025 – Пољска</li>
+      <li>Reacon Squad – 07–08. јун 2025 – Пољска</li>
+    </ul>
+  </div>
+  <div class="en-content">
+    <h2>Events</h2>
+    <h3>Completed</h3>
+    <ul>
+      <li><s>Finnish Brutality 2024 – August 25–26, 2024 – Finland</s></li>
+      <li><s>Finnish Brutality 2025 – February 17–18, 2025 – Finland</s></li>
+      <li><s>Defcon 1 – March 30, 2025 – Poland</s></li>
+    </ul>
+    <h3>Upcoming</h3>
+    <ul>
+      <li>Operation Furia – June 6, 2025 – Poland</li>
+      <li>Reacon Squad – June 7–8, 2025 – Poland</li>
+    </ul>
+  </div>
+</section>
 
-  <section id="join">
-    <div class="sr-content">
-      <h2>Придружи се тиму</h2>
-      <form action="mailto:filipcvorovic@yahoo.com" method="POST" enctype="text/plain">
-        <input type="text" name="Име и презиме" placeholder="Име и презиме" required>
-        <input type="email" name="Е-пошта" placeholder="Е-пошта" required>
-        <textarea name="Порука" rows="4" placeholder="Зашто желиш да нам се придружиш?" required></textarea>
-        <button type="submit">Пошаљи</button>
-      </form>
-    </div>
-    <div class="en-content">
-      <h2>Join the Team</h2>
-      <form action="https://formsubmit.co/filipcvorovic@yahoo.com" method="POST">
-  <input type="text" name="Full name" placeholder="Full name" required>
-  <input type="email" name="Email" placeholder="Email" required>
-  <textarea name="Message" rows="4" placeholder="Why do you want to join us?" required></textarea>
-  <button type="submit">Submit</button>
-</form>
-    </div>
-  </section>
+$1<section id="join">
+  <div class="sr-content">
+    <h2>Придружи се тиму</h2>
+    <p>Пријаву у клуб можете извршити путем нашег Instagram профила <a href="https://www.instagram.com/381.team" target="_blank">@381.team</a>.</p>
+  </div>
+  <div class="en-content">
+    <h2>Join the Team</h2>
+    <p>To join the club, please contact us via our Instagram profile <a href="https://www.instagram.com/381.team" target="_blank">@381.team</a>.</p>
+  </div>
+</section>
 
-  <div class="social-links">
+<div class="social-links">
     <a href="https://www.instagram.com/381.team" target="_blank"><i class="fab fa-instagram"></i> @381.team</a>
     <a href="https://www.youtube.com/@381team" target="_blank"><i class="fab fa-youtube"></i> @381team</a>
   </div>
